@@ -10,10 +10,11 @@ class SearchController < ApplicationController
   end
 
   def search_for_station
-    get_loctaion_data
-    
+    split = get_loctaion_data.split(',')
+    state = split.last.split.first
     service = FuelStationService.new
-
+    station_data = service.step_two_chunk_it_out(state)
+    binding.pry
   end
 
 end
