@@ -5,7 +5,8 @@ RSpec.describe "fuel service api test" do
     it "it returns something that is not an error" do
       service = FuelStationService.new
       connected = service.get_a_basic_connection_step_one
-  
+      step_two_is_working = service.step_two_chunk_it_out
+      binding.pry
     end
   end
 end
