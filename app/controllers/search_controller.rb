@@ -14,7 +14,7 @@ class SearchController < ApplicationController
     state = split.last.split.first
     service = FuelStationService.new
     station_data = service.step_two_chunk_it_out(state)
-    binding.pry
+    
   end
 
 end
